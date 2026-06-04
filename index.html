@@ -114,6 +114,10 @@
             --nav-bg: rgba(20, 20, 18, 0.8);
         }
 
+        [data-theme="dark"] .cta-banner {
+            background-color: #0f5459;
+        }
+
         @media (prefers-color-scheme: dark) {
             :root:not([data-theme]) {
                 --color-bg: #141412;
@@ -627,11 +631,21 @@
             margin-top: var(--space-2);
         }
 
-        @media (max-width: 768px) {
-            .hero__visual {
-                display: none;
+        /* Small phones only — vertical stack */
+        @media (max-width: 480px) {
+            .hero__stats {
+                grid-template-columns: 1fr;
+                gap: var(--space-3);
+                margin-top: var(--space-10);
             }
 
+            .hero__stat {
+                padding: var(--space-4) var(--space-5);
+            }
+        }
+
+        /* Tablets — restore 3 columns */
+        @media (min-width: 481px) and (max-width: 768px) {
             .hero__stats {
                 grid-template-columns: repeat(3, 1fr);
                 gap: var(--space-3);
@@ -691,12 +705,12 @@
         .section-header--center .section-body {
             margin-inline: auto;
         }
-        
+
         .section-header--center .section-label {
             margin-inline: auto;
         }
 
-    /* =============================================
+        /* =============================================
        HOW IT WORKS
     ============================================= */
         .how-it-works {
@@ -782,6 +796,13 @@
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: auto auto;
             gap: var(--space-4);
+        }
+
+        .gallery__grid--machines .gallery__item:first-child,
+        .gallery__grid--machines .gallery__item:nth-child(4) {
+            grid-column: auto;
+            grid-row: auto;
+            aspect-ratio: 3/4;
         }
 
         .gallery__item {
@@ -1410,15 +1431,15 @@
             margin-bottom: var(--space-8);
         }
 
-        .cta-banner .btn-cta {
-            background: #fff;
-            color: var(--color-primary);
-            font-size: var(--text-base);
-            padding: var(--space-4) var(--space-10);
-        }
+        /*.cta-banner .btn-cta {*/
+        /*    background: #fff;*/
+        /*    color: var(--color-primary);*/
+        /*    font-size: var(--text-base);*/
+        /*    padding: var(--space-4) var(--space-10);*/
+        /*}*/
 
         .cta-banner .btn-cta:hover {
-            background: oklch(1 0 0 / 0.9);
+            background: oklch(1 0 0 / 0.3);
         }
 
         /* =============================================
@@ -1921,15 +1942,21 @@
                     <p class="section-body">Our custom phone case vending machines are designed to fit seamlessly into malls, airports, and venues. Walk up, design your case, and walk away in minutes.</p>
                 </div>
 
-                <div class="gallery__grid">
-                    <div class="gallery__item fade-in" tabindex="0" role="button" aria-label="View: Gradient Wave Sample design" data-img="https://raw.githubusercontent.com/Abdvllxh/PhoneCaseCanvas/main/Machine%20photo%201.jpg">
-                        <img src="https://raw.githubusercontent.com/Abdvllxh/PhoneCaseCanvas/main/Machine%20photo%201.jpg" alt="Phone case with gradient wave design in teal and purple" width="600" height="900" loading="lazy" />
+                <div class="gallery__grid gallery__grid--machines">
+
+                    <div class="gallery__item fade-in fade-in-delay-1" tabindex="0" role="button" aria-label="View: Bubblegum Pink Sample Machine" data-img="https://raw.githubusercontent.com/Abdvllxh/PhoneCaseCanvas/main/Pink%202.jpg">
+                        <img src="https://raw.githubusercontent.com/Abdvllxh/PhoneCaseCanvas/main/Pink%202.jpg" alt="Phone case with pink design" width="600" height="900" loading="lazy" />
+                        <span class="gallery__item-label">Bubblegum Pink Sample Machine</span>
+                    </div>
+
+                    <div class="gallery__item fade-in" tabindex="0" role="button" aria-label="View: Gradient Wave Sample design" data-img="https://raw.githubusercontent.com/Abdvllxh/PhoneCaseCanvas/main/Machine%20forward%20facing.jpg">
+                        <img src="https://raw.githubusercontent.com/Abdvllxh/PhoneCaseCanvas/main/Machine%20forward%20facing.jpg" alt="Phone case with gradient wave design in teal and purple" width="600" height="900" loading="lazy" />
                         <span class="gallery__item-label">Gradient Wave Sample Machine</span>
                     </div>
 
-                    <div class="gallery__item fade-in fade-in-delay-1" tabindex="0" role="button" aria-label="View: Bubblegum Pink Sample Machine" data-img="https://raw.githubusercontent.com/Abdvllxh/PhoneCaseCanvas/main/Pink%202.jpg">
-                        <img src="https://raw.githubusercontent.com/Abdvllxh/PhoneCaseCanvas/main/Pink%202.jpg" alt="Phone case with pink design" width="600" height="700" loading="lazy" />
-                        <span class="gallery__item-label">Bubblegum Pink Sample Machine</span>
+                    <div class="gallery__item fade-in" tabindex="0" role="button" aria-label="View: Gradient Wave Sample design" data-img="https://raw.githubusercontent.com/Abdvllxh/PhoneCaseCanvas/main/Machine%20left%20facing.jpg">
+                        <img src="https://raw.githubusercontent.com/Abdvllxh/PhoneCaseCanvas/main/Machine%20left%20facing.jpg" alt="Phone case with gradient wave design in teal and purple" width="600" height="900" loading="lazy" />
+                        <span class="gallery__item-label">White Green Sample Machine</span>
                     </div>
                 </div>
             </div>
@@ -2307,7 +2334,7 @@
             <div class="cta-banner__inner">
                 <h2 class="cta-banner__title" id="cta-heading">Ready to Find Your Perfect Case?</h2>
                 <p class="cta-banner__sub">Walk up to any Phone Case Canvas machine and create something uniquely yours.</p>
-                <a href="#locations" class="btn-cta">Find a Machine Near Me</a>
+                <a href="#locations" class="btn-cta btn-cta--outline" style="border-color: oklch(1 0 0 / 0.3); color: oklch(1 0 0 / 0.8);">Find a Machine Near Me</a>
             </div>
         </section>
     </main>
