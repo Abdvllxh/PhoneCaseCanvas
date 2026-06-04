@@ -11,7 +11,7 @@
     <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
 
     <style>
-    /* =============================================
+        /* =============================================
        Art direction: Modern retail tech brand → confident, clean, slightly bold
        Palette: Near-black surfaces + electric teal accent, warm off-white light mode
        Typography: Cabinet Grotesk (display) + Satoshi (body)
@@ -254,7 +254,7 @@
             top: var(--space-4);
         }
 
-    /* =============================================
+        /* =============================================
        NAVIGATION
     ============================================= */
         .nav {
@@ -447,11 +447,11 @@
             }
         }
 
-    /* =============================================
+        /* =============================================
        HERO SECTION
     ============================================= */
         .hero {
-            min-height: 100dvh;
+            min-height: min(100dvh, 700px);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -488,7 +488,7 @@
             z-index: 1;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
         }
 
         .hero__badge {
@@ -596,7 +596,7 @@
             gap: var(--space-6);
             margin-top: var(--space-16);
             max-width: var(--content-wide);
-            margin-inline: auto;
+            margin-inline: center;
             position: relative;
             z-index: 1;
             width: 100%;
@@ -642,7 +642,7 @@
             }
         }
 
-    /* =============================================
+        /* =============================================
        SECTION WRAPPER
     ============================================= */
         .section {
@@ -691,6 +691,10 @@
         .section-header--center .section-body {
             margin-inline: auto;
         }
+        
+        .section-header--center .section-label {
+            margin-inline: auto;
+        }
 
     /* =============================================
        HOW IT WORKS
@@ -709,12 +713,12 @@
         .steps::before {
             content: '';
             position: absolute;
-            top: 28px;
+            top: 55px;
             left: 12.5%;
             right: 12.5%;
-            height: 1px;
-            background: linear-gradient(90deg, var(--color-primary), transparent 50%, var(--color-primary));
-            opacity: 0.25;
+            height: 10px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-primary));
+            opacity: 0.15;
             pointer-events: none;
         }
 
@@ -770,7 +774,7 @@
             }
         }
 
-    /* =============================================
+        /* =============================================
        GALLERY
     ============================================= */
         .gallery__grid {
@@ -899,7 +903,7 @@
             }
         }
 
-    /* =============================================
+        /* =============================================
        LOCATIONS
     ============================================= */
         .locations {
@@ -962,13 +966,13 @@
             color: var(--color-text-muted);
         }
 
-    /* =============================================
+        /* =============================================
        WHY CHOOSE US — Asymmetric feature layout
     ============================================= */
         .features__layout {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
         }
 
         .features__list {
@@ -984,7 +988,7 @@
             background: var(--color-surface);
             display: flex;
             gap: var(--space-5);
-            align-items: flex-start;
+            align-items: center;
             transition: border-color var(--transition-interactive), box-shadow var(--transition-interactive);
         }
 
@@ -1040,83 +1044,83 @@
             }
         }
 
-    /* =============================================
+        /* =============================================
        TESTIMONIALS
     ============================================= */
-    /*    .testimonials {*/
-    /*        background: var(--color-surface);*/
-    /*    }*/
+        /*    .testimonials {*/
+        /*        background: var(--color-surface);*/
+        /*    }*/
 
-    /*    .testimonials__grid {*/
-    /*        display: grid;*/
-    /*        grid-template-columns: repeat(3, 1fr);*/
-    /*        gap: var(--space-6);*/
-    /*    }*/
+        /*    .testimonials__grid {*/
+        /*        display: grid;*/
+        /*        grid-template-columns: repeat(3, 1fr);*/
+        /*        gap: var(--space-6);*/
+        /*    }*/
 
-    /*    .testimonial {*/
-    /*        background: var(--color-surface-2);*/
-    /*        border-radius: var(--radius-xl);*/
-    /*        padding: var(--space-8);*/
-    /*        border: 1px solid oklch(from var(--color-text) l c h / 0.06);*/
-    /*        transition: box-shadow var(--transition-interactive), transform var(--transition-interactive);*/
-    /*    }*/
+        /*    .testimonial {*/
+        /*        background: var(--color-surface-2);*/
+        /*        border-radius: var(--radius-xl);*/
+        /*        padding: var(--space-8);*/
+        /*        border: 1px solid oklch(from var(--color-text) l c h / 0.06);*/
+        /*        transition: box-shadow var(--transition-interactive), transform var(--transition-interactive);*/
+        /*    }*/
 
-    /*    .testimonial:hover {*/
-    /*        box-shadow: var(--shadow-md);*/
-    /*        transform: translateY(-2px);*/
-    /*    }*/
+        /*    .testimonial:hover {*/
+        /*        box-shadow: var(--shadow-md);*/
+        /*        transform: translateY(-2px);*/
+        /*    }*/
 
-    /*    .testimonial__stars {*/
-    /*        color: #f4a533;*/
-    /*        font-size: var(--text-base);*/
-    /*        letter-spacing: 2px;*/
-    /*        margin-bottom: var(--space-4);*/
-    /*    }*/
+        /*    .testimonial__stars {*/
+        /*        color: #f4a533;*/
+        /*        font-size: var(--text-base);*/
+        /*        letter-spacing: 2px;*/
+        /*        margin-bottom: var(--space-4);*/
+        /*    }*/
 
-    /*    .testimonial__quote {*/
-    /*        font-size: var(--text-base);*/
-    /*        color: var(--color-text-muted);*/
-    /*        line-height: 1.7;*/
-    /*        margin-bottom: var(--space-6);*/
-    /*    }*/
+        /*    .testimonial__quote {*/
+        /*        font-size: var(--text-base);*/
+        /*        color: var(--color-text-muted);*/
+        /*        line-height: 1.7;*/
+        /*        margin-bottom: var(--space-6);*/
+        /*    }*/
 
-    /*    .testimonial__author {*/
-    /*        display: flex;*/
-    /*        align-items: center;*/
-    /*        gap: var(--space-3);*/
-    /*    }*/
+        /*    .testimonial__author {*/
+        /*        display: flex;*/
+        /*        align-items: center;*/
+        /*        gap: var(--space-3);*/
+        /*    }*/
 
-    /*    .testimonial__avatar {*/
-    /*        width: 40px;*/
-    /*        height: 40px;*/
-    /*        border-radius: var(--radius-full);*/
-    /*        background: var(--color-primary-highlight);*/
-    /*        color: var(--color-primary);*/
-    /*        display: flex;*/
-    /*        align-items: center;*/
-    /*        justify-content: center;*/
-    /*        font-family: var(--font-display);*/
-    /*        font-weight: 700;*/
-    /*        font-size: var(--text-sm);*/
-    /*    }*/
+        /*    .testimonial__avatar {*/
+        /*        width: 40px;*/
+        /*        height: 40px;*/
+        /*        border-radius: var(--radius-full);*/
+        /*        background: var(--color-primary-highlight);*/
+        /*        color: var(--color-primary);*/
+        /*        display: flex;*/
+        /*        align-items: center;*/
+        /*        justify-content: center;*/
+        /*        font-family: var(--font-display);*/
+        /*        font-weight: 700;*/
+        /*        font-size: var(--text-sm);*/
+        /*    }*/
 
-    /*    .testimonial__name {*/
-    /*        font-weight: 700;*/
-    /*        font-size: var(--text-sm);*/
-    /*    }*/
+        /*    .testimonial__name {*/
+        /*        font-weight: 700;*/
+        /*        font-size: var(--text-sm);*/
+        /*    }*/
 
-    /*    .testimonial__location {*/
-    /*        font-size: var(--text-xs);*/
-    /*        color: var(--color-text-faint);*/
-    /*    }*/
+        /*    .testimonial__location {*/
+        /*        font-size: var(--text-xs);*/
+        /*        color: var(--color-text-faint);*/
+        /*    }*/
 
-    /*    @media (max-width: 768px) {*/
-    /*        .testimonials__grid {*/
-    /*            grid-template-columns: 1fr;*/
-    /*        }*/
-    /*    }*/
+        /*    @media (max-width: 768px) {*/
+        /*        .testimonials__grid {*/
+        /*            grid-template-columns: 1fr;*/
+        /*        }*/
+        /*    }*/
 
-    /* =============================================
+        /* =============================================
        CONTACT FORM
     ============================================= */
         .contact__layout {
@@ -1133,7 +1137,7 @@
         .contact__info-item {
             display: flex;
             gap: var(--space-4);
-            align-items: flex-start;
+            align-items: centert;
             margin-bottom: var(--space-6);
         }
 
@@ -1292,7 +1296,7 @@
             }
         }
 
-    /* =============================================
+        /* =============================================
        FAQ
     ============================================= */
         .faq {
@@ -1364,7 +1368,7 @@
             max-height: 300px;
         }
 
-    /* =============================================
+        /* =============================================
        CTA BANNER
     ============================================= */
         .cta-banner {
@@ -1417,7 +1421,7 @@
             background: oklch(1 0 0 / 0.9);
         }
 
-    /* =============================================
+        /* =============================================
        FOOTER
     ============================================= */
         .footer {
@@ -1523,7 +1527,7 @@
             }
         }
 
-    /* =============================================
+        /* =============================================
        SCROLL ANIMATIONS
     ============================================= */
         .fade-in {
@@ -1557,7 +1561,7 @@
             }
         }
 
-    /* =============================================
+        /* =============================================
        PHONE SVG MOCKUP
     ============================================= */
         .phone-svg-wrapper {
@@ -1627,7 +1631,7 @@
         }
 
 
-    /* ===== LEGAL MODALS ===== */
+        /* ===== LEGAL MODALS ===== */
         .modal-overlay {
             position: fixed;
             inset: 0;
@@ -1802,7 +1806,8 @@
         <section class="hero" aria-label="Hero">
             <div class="hero__grid-bg" aria-hidden="true"></div>
             <div class="hero__inner">
-                <div class="hero__content" style="max-width: 720px; text-align: center;">
+                <div class="hero__content" style="max-width: 720px; margin-inline: auto;
+  text-align: center;">
                     <h1 class="hero__title">
                         Your Case,<br>
                         <em>Your Canvas.</em>
@@ -1900,7 +1905,7 @@
                         <span class="gallery__item-label">Sample Case</span>
                     </div>
                 </div>
-
+                <br>
                 <div class="gallery__item fade-in" style="aspect-ratio: 16/9;" tabindex="0" role="button" aria-label="View: Sample Case" data-img="https://raw.githubusercontent.com/Abdvllxh/PhoneCaseCanvas/main/Phone%20case%20with%20phone%20picture.jpeg" style="grid-column: span 2;">
                     <img src="https://raw.githubusercontent.com/Abdvllxh/PhoneCaseCanvas/main/Phone%20case%20with%20phone%20picture.jpeg" alt="Sample Case" width="900" height="300" loading="lazy" style="object-fit: cover; width: 100%; height: 100%;" />
                     <span class="gallery__item-label">Sample Case</span>
@@ -2035,9 +2040,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="features__image" aria-hidden="true">
-                        <img src="https://picsum.photos/seed/vendingmachine/600/800" alt="Phone Case Canvas vending machine in a shopping mall" width="600" height="800" loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -2401,6 +2403,7 @@
                         <li>Photos you upload to our machines to create a custom case</li>
                         <li>Messages or inquiries you send us</li>
                     </ul>
+                    <p>Contact form submissions are processed via Web3Forms. See their privacy policy at web3forms.com/privacy.</p>
 
                     <h2>3. How We Use Your Information</h2>
                     <ul>
