@@ -87,7 +87,7 @@
             --shadow-md: 0 4px 12px oklch(0.2 0.01 80 / 0.08);
             --shadow-lg: 0 12px 32px oklch(0.2 0.01 80 / 0.12);
             --hero-overlay: linear-gradient(135deg, #1a1916 55%, #00787f 100%);
-            --nav-bg: rgba(247, 246, 242, 0.7);
+            --nav-bg: rgba(247, 246, 242, 0.65);
         }
 
         /* Dark mode */
@@ -111,7 +111,7 @@
             --shadow-md: 0 4px 12px oklch(0 0 0 / 0.35);
             --shadow-lg: 0 12px 32px oklch(0 0 0 / 0.45);
             --hero-overlay: linear-gradient(135deg, #141412 55%, #0d4a4e 100%);
-            --nav-bg: rgba(20, 20, 18, 0.8);
+            --nav-bg: rgba(20, 20, 18, 0.75);
         }
 
         [data-theme="dark"] .cta-banner {
@@ -340,8 +340,8 @@
             align-items: center;
             justify-content: center;
             color: var(--color-text-muted);
-            border: 1px solid oklch(from var(--color-text) l c h / 0.1);
-            background: var(--color-surface);
+            background: oklch(from var(--color-surface) l c h / 0.2);
+  border: 1px solid oklch(from var(--color-text) l c h / 0.08);
             cursor: pointer;
             transition: color var(--transition-interactive), border-color var(--transition-interactive),
                 background var(--transition-interactive), transform var(--transition-interactive);
@@ -448,6 +448,10 @@
 
             .nav__burger {
                 display: flex;
+            }
+            
+            .nav__logo-text {
+                display: none;
             }
         }
 
@@ -1787,7 +1791,7 @@
                     <path d="M11 14 Q15 11 18 16 Q21 21 25 14" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" fill="none" />
                     <circle cx="18" cy="30" r="1.5" fill="currentColor" opacity="0.4" />
                 </svg>
-                Phone Case Canvas
+                <span class="nav__logo-text">Phone Case Canvas</span>
             </a>
 
             <ul class="nav__links" role="list">
