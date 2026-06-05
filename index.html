@@ -86,8 +86,8 @@
             --shadow-sm: 0 1px 2px oklch(0.2 0.01 80 / 0.06);
             --shadow-md: 0 4px 12px oklch(0.2 0.01 80 / 0.08);
             --shadow-lg: 0 12px 32px oklch(0.2 0.01 80 / 0.12);
-            --hero-overlay: linear-gradient(135deg, #1a1916 55%, #00787f 100%);
-            --nav-bg: rgba(247, 246, 242, 0.65);
+            --hero-overlay: linear-gradient(315deg, #223232 55%, #00787f 100%);
+            --nav-bg: rgba(247, 246, 242, 0.75);
         }
 
         /* Dark mode */
@@ -341,7 +341,7 @@
             justify-content: center;
             color: var(--color-text-muted);
             background: oklch(from var(--color-surface) l c h / 0.2);
-  border: 1px solid oklch(from var(--color-text) l c h / 0.08);
+            border: 1px solid oklch(from var(--color-text) l c h / 0.08);
             cursor: pointer;
             transition: color var(--transition-interactive), border-color var(--transition-interactive),
                 background var(--transition-interactive), transform var(--transition-interactive);
@@ -397,6 +397,10 @@
             transform: translateY(-1px);
         }
 
+        #btn-how-it-works:hover {
+            background: oklch(1 0 0 / 0.25);
+        }
+
         /* Hamburger */
         .nav__burger {
             display: none;
@@ -449,7 +453,7 @@
             .nav__burger {
                 display: flex;
             }
-            
+
             .nav__logo-text {
                 display: none;
             }
@@ -1844,7 +1848,7 @@
                     <p class="hero__sub" style="margin-inline: auto;">Custom-designed phone cases printed and dispensed on-demand. Find us at malls and venues across the Greater Toronto Area.</p>
                     <div class="hero__actions" style="justify-content: center;">
                         <a href="#locations" class="btn-cta">Find a Machine</a>
-                        <a href="#how-it-works" class="btn-cta btn-cta--outline" style="border-color: oklch(1 0 0 / 0.3); color: oklch(1 0 0 / 0.8);">See How It Works</a>
+                        <a href="#how-it-works" class="btn-cta btn-cta--outline" id="btn-how-it-works" style="border-color: oklch(1 0 0 / 0.3); color: oklch(1 0 0 / 0.8);">See How It Works</a>
                     </div>
                 </div>
             </div>
